@@ -64,7 +64,7 @@ def createRoom(request):
         floor=0,
         beds=1,
         room_no=1,
-        room_type='Sample',
+        room_type='Un-Furnished',
         tags=['room'],
         price=0,
     )
@@ -81,11 +81,10 @@ def updateRoom(request, pk):
 
     room.title = data['title']
     room.price = data['price']
-    room.floor = data['floor']
     room.beds = data['beds']
+    room.floor = data['floor']
+    room.room_type = data['room_type']    
     room.room_no = data['room_no']
-    room.room_type = data['room_type']
-    room.price = data['price']
 
     room.save()
 

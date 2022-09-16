@@ -12,7 +12,7 @@ class Room(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=100)
     image = models.ImageField(null=True, blank=True,
-                              default='rooms/placeholder.png')
+                              default='images/placeholder.png')
     floor = models.IntegerField()
     beds = models.IntegerField()
     room_no = models.IntegerField()

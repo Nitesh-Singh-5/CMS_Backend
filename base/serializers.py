@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework_simplejwt.tokens import RefreshToken
-from .models import Room
+from .models import Room,VerificationModel
 from taggit.serializers import (TagListSerializerField,
                                 TaggitSerializer)
 
@@ -48,4 +48,10 @@ class RoomSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Room
+        fields = '__all__'
+
+
+class verificationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = VerificationModel
         fields = '__all__'

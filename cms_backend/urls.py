@@ -10,6 +10,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/rooms/', include('base.urls.rooms_urls')),
     path('api/users/', include('base.urls.user_urls')),
+    path('api/verification/', include('base.urls.room_booking_urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
